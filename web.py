@@ -8,7 +8,7 @@ from random import randint
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
+        raise RuntimeError('server shutdown Not running with the Werkzeug Server')
     func()
 
 
